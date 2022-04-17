@@ -1,6 +1,6 @@
 Name,Brand,Display,HDH,Camera sau,Camera trước,Chip,Ram,Rom,Sim,Battery,Charge,Gia,Danh gia,So Luong
 Điện thoại Samsung Galaxy S22 Ultra 5G 128GB,Samsung,"Dynamic AMOLED 2X,6.8"",Quad HD+ (2K+)",Android 12,"Chính 108 MP & Phụ 12 MP, 10 MP, 10 MP",40 MP,Snapdragon 8 Gen 1 8 nhân,8 GB,128 GB,2 Nano SIM hoặc 1 Nano SIM + 1 eSIM,5000 mAh,45 W,30.990.000₫ ,3.3,13
-Điện thoại iPhone 11 64GB,iPhone,"IPS LCD,6.1"",Liquid Retina",iOS 15,2 camera 12 MP,12 MP,Apple A13 Bionic,4 GB,64 GB,1 Nano SIM & 1 eSIM,3110 mAh,18 W,16.290.000₫ ,4.0,808
+Điện thoại iPhone 11 64GB,iPhone,"IPS LCD,6.1"",Liquid Retina",iOS 15,2 camera 12 MP,12 MP,Apple A13 Bionic,4 GB,64 GB,1 Nano SIM & 1 eSIM,3110 mAh,18 W,16.290.000₫ ,4,808
 Điện thoại OPPO Reno7 Z 5G,OPPO,"AMOLED,6.43"",Full HD+",Android 11,"Chính 64 MP & Phụ 2 MP, 2 MP",16 MP,Snapdragon 695 5G 8 nhân,8 GB,128 GB,2 Nano SIM (SIM 2 chung khe thẻ nhớ),4500 mAh,33 W,10.490.000₫ ,3.8,70
 Điện thoại Realme C35,Realme,"IPS LCD,6.6"",Full HD+",Android 11,"Chính 50 MP & Phụ 2 MP, 0.3 MP",8 MP,Unisoc T616 8 nhân,4 GB,64 GB,2 Nano SIM,5000 mAh,18 W,3.990.000₫ ,3.8,64
 Điện thoại Xiaomi 11T 5G 128GB,Xiaomi,"AMOLED,6.67"",Full HD+",Android 11,"Chính 108 MP & Phụ 8 MP, 5 MP",16 MP,MediaTek Dimensity 1200,8 GB,128 GB,2 Nano SIM,5000 mAh,67 W,10.990.000₫ ,3.9,289
@@ -11,15 +11,15 @@ Name,Brand,Display,HDH,Camera sau,Camera trước,Chip,Ram,Rom,Sim,Battery,Charg
 Điện thoại Vivo Y15s,Vivo,"IPS LCD,6.51"",HD+",Android 11 (Go Edition),Chính 13 MP & Phụ 2 MP,8 MP,MediaTek Helio P35,3 GB,32 GB,2 Nano SIM,5000 mAh,10 W,3.490.000₫ ,3.4,73
 Điện thoại Samsung Galaxy Z Fold3 5G 256GB,Samsung,"Dynamic AMOLED 2X,Chính 7.6"" & Phụ 6.2"",Full HD+",Android 11,3 camera 12 MP,10 MP & 4 MP,Snapdragon 888,12 GB,256 GB,2 Nano SIM + 1 eSIM,4400 mAh,25 W,35.990.000₫ ,4.8,26
 Điện thoại iPhone 13 Pro Max 128GB Xanh lá,iPhone,"OLED,6.7"",Super Retina XDR",iOS 15,3 camera 12 MP,12 MP,Apple A15 Bionic,6 GB,128 GB,1 Nano SIM & 1 eSIM,4352 mAh,20 W,33.490.000₫ *,NULL,0
-Điện thoại iPhone 13 Pro 128GB,iPhone,"OLED,6.1"",Super Retina XDR",iOS 15,3 camera 12 MP,12 MP,Apple A15 Bionic,6 GB,128 GB,1 Nano SIM & 1 eSIM,3095 mAh,20 W,29.990.000₫ ,4.4,75
 Điện thoại iPhone 12 Pro Max 256GB,iPhone,"OLED,6.7"",Super Retina XDR",iOS 15,3 camera 12 MP,12 MP,Apple A14 Bionic,6 GB,256 GB,1 Nano SIM & 1 eSIM,3687 mAh,20 W,29.990.000₫ ,4,46
+Điện thoại iPhone 13 Pro 128GB,iPhone,"OLED,6.1"",Super Retina XDR",iOS 15,3 camera 12 MP,12 MP,Apple A15 Bionic,6 GB,128 GB,1 Nano SIM & 1 eSIM,3095 mAh,20 W,29.990.000₫ ,4.4,75
 Điện thoại iPhone 13 Pro 128GB Xanh lá,iPhone,"OLED,6.1"",Super Retina XDR",iOS 15,3 camera 12 MP,12 MP,Apple A15 Bionic,6 GB,128 GB,1 Nano SIM & 1 eSIM,3095 mAh,20 W,29.490.000₫ *,NULL,0
 Điện thoại Samsung Galaxy S22+ 5G 128GB,Samsung,"Dynamic AMOLED 2X,6.6"",Full HD+",Android 12,"Chính 50 MP & Phụ 12 MP, 10 MP",10 MP,Snapdragon 8 Gen 1 8 nhân,8 GB,128 GB,2 Nano SIM hoặc 1 Nano SIM + 1 eSIM,4500 mAh,45 W,25.990.000₫ ,5,5
 Điện thoại Samsung Galaxy S21 Ultra 5G 128GB,Samsung,"Dynamic AMOLED 2X,6.8"",Quad HD+ (2K+)",Android 11,"Chính 108 MP & Phụ 12 MP, 10 MP, 10 MP",40 MP,Exynos 2100,12 GB,128 GB,2 Nano SIM hoặc 1 Nano SIM + 1 eSIM,5000 mAh,25 W,25.990.000₫ ,3.3,178
 Điện thoại iPhone 12 Pro 256GB,iPhone,"OLED,6.1"",Super Retina XDR",iOS 15,3 camera 12 MP,12 MP,Apple A14 Bionic,6 GB,256 GB,1 Nano SIM & 1 eSIM,2815 mAh,20 W,26.290.000₫ ,3.5,21
 Điện thoại iPhone 13 128GB,iPhone,"OLED,6.1"",Super Retina XDR",iOS 15,2 camera 12 MP,12 MP,Apple A15 Bionic,4 GB,128 GB,1 Nano SIM & 1 eSIM,3240 mAh,20 W,24.190.000₫ ,4.4,241
-Điện thoại Samsung Galaxy S22 5G 128GB,Samsung,"Dynamic AMOLED 2X,6.1"",Full HD+",Android 12,"Chính 50 MP & Phụ 12 MP, 10 MP",10 MP,Snapdragon 8 Gen 1 8 nhân,8 GB,128 GB,2 Nano SIM hoặc 1 Nano SIM + 1 eSIM,3700 mAh,25 W,21.990.000₫ ,5,13
-Điện thoại Samsung Galaxy S21+ 5G 128GB,Samsung,"Dynamic AMOLED 2X,6.7"",Full HD+",Android 11,"Chính 12 MP & Phụ 64 MP, 12 MP",10 MP,Exynos 2100,8 GB,128 GB,2 Nano SIM hoặc 1 Nano SIM + 1 eSIM,4800 mAh,25 W,20.990.000₫ ,3.0,145
+Điện thoại Samsung Galaxy S22 5G 128GB,Samsung,"Dynamic AMOLED 2X,6.1"",Full HD+",Android 12,"Chính 50 MP & Phụ 12 MP, 10 MP",10 MP,Snapdragon 8 Gen 1 8 nhân,8 GB,128 GB,2 Nano SIM hoặc 1 Nano SIM + 1 eSIM,3700 mAh,25 W,21.990.000₫ ,5,14
+Điện thoại Samsung Galaxy S21+ 5G 128GB,Samsung,"Dynamic AMOLED 2X,6.7"",Full HD+",Android 11,"Chính 12 MP & Phụ 64 MP, 12 MP",10 MP,Exynos 2100,8 GB,128 GB,2 Nano SIM hoặc 1 Nano SIM + 1 eSIM,4800 mAh,25 W,20.990.000₫ ,3,145
 Điện thoại Samsung Galaxy Z Flip3 5G 128GB,Samsung,"Dynamic AMOLED 2X,Chính 6.7"" & Phụ 1.9"",Full HD+",Android 11,2 camera 12 MP,10 MP,Snapdragon 888,8 GB,128 GB,1 Nano SIM & 1 eSIM,3300 mAh,15 W,24.990.000₫,4.1,35
 Điện thoại Xiaomi 12,Xiaomi,"AMOLED,6.28"",Full HD+",Android 12,"Chính 50 MP & Phụ 13 MP, 5 MP",32 MP,Snapdragon 8 Gen 1 8 nhân,8 GB,256 GB,2 Nano SIM,4500 mAh,67 W,19.990.000₫ ,NULL,0
 Điện thoại iPhone 13 mini 128GB,iPhone,"OLED,5.4"",Super Retina XDR",iOS 15,2 camera 12 MP,12 MP,Apple A15 Bionic,4 GB,128 GB,1 Nano SIM & 1 eSIM,2438 mAh,20 W,18.990.000₫ *,4.4,28
@@ -36,9 +36,9 @@ Name,Brand,Display,HDH,Camera sau,Camera trước,Chip,Ram,Rom,Sim,Battery,Charg
 Điện thoại iPhone SE 64GB (2020) (Hộp mới),iPhone,"IPS LCD,4.7"",Retina HD",iOS 15,12 MP,7 MP,Apple A13 Bionic,3 GB,64 GB,1 Nano SIM & 1 eSIM,1821 mAh,18 W,10.690.000₫ ,4.1,49
 Điện thoại iPhone SE 64GB (2022),iPhone,"IPS LCD,4.7"",Retina HD",iOS 15,12 MP,7 MP,Apple A15 Bionic,3 GB,64 GB,1 Nano SIM & 1 eSIM,2018 mAh,20 W,Giá dự kiến: 11.990.000₫ ,NULL,0
 Điện thoại OPPO Reno4 Pro,OPPO,"AMOLED,6.5"",Full HD+",Android 10,"Chính 48 MP & Phụ 8 MP, 2 MP, 2 MP",32 MP,Snapdragon 720G,8 GB,256 GB,2 Nano SIM,4000 mAh,65 W,10.490.000₫ ,4.1,141
-Điện thoại Vivo V21 5G,Vivo,"AMOLED,6.44"",Full HD+",Android 11,"Chính 64 MP & Phụ 8 MP, 2 MP",44 MP,MediaTek Dimensity 800U 5G,8 GB + 3 GB (Công nghệ mở rộng RAM),128 GB,2 Nano SIM,4000 mAh,33 W,9.990.000₫ ,3.3,134
 Điện thoại Samsung Galaxy A53 5G 128GB,Samsung,"Super AMOLED,6.5"",Full HD+",Android 12,"Chính 64 MP & Phụ 12 MP, 5 MP, 5 MP",32 MP,Exynos 1280 8 nhân,8 GB,128 GB,2 Nano SIM (SIM 2 chung khe thẻ nhớ),5000 mAh,25 W,9.990.000₫ ,3.4,78
-Điện thoại Xiaomi 11 Lite 5G NE,Xiaomi,"AMOLED,6.55"",Full HD+",Android 11,"Chính 64 MP & Phụ 8 MP, 5 MP",20 MP,Snapdragon 778G 5G 8 nhân,8 GB,128 GB,2 Nano SIM (SIM 2 chung khe thẻ nhớ),4250 mAh,33 W,9.490.000₫ ,3.7,308
+Điện thoại Vivo V21 5G,Vivo,"AMOLED,6.44"",Full HD+",Android 11,"Chính 64 MP & Phụ 8 MP, 2 MP",44 MP,MediaTek Dimensity 800U 5G,8 GB + 3 GB (Công nghệ mở rộng RAM),128 GB,2 Nano SIM,4000 mAh,33 W,9.990.000₫ ,3.3,134
+Điện thoại Xiaomi 11 Lite 5G NE,Xiaomi,"AMOLED,6.55"",Full HD+",Android 11,"Chính 64 MP & Phụ 8 MP, 5 MP",20 MP,Snapdragon 778G 5G 8 nhân,8 GB,128 GB,2 Nano SIM (SIM 2 chung khe thẻ nhớ),4250 mAh,33 W,9.490.000₫ ,3.7,309
 Điện thoại Samsung Galaxy A52 128GB,Samsung,"Super AMOLED,6.5"",Full HD+",Android 11,"Chính 64 MP & Phụ 12 MP, 5 MP, 5 MP",32 MP,Snapdragon 720G,8 GB,128 GB,2 Nano SIM,4500 mAh,25 W,9.290.000₫ ,3,216
 Điện thoại OPPO Reno5 5G,OPPO,"AMOLED,6.43"",Full HD+",Android 11,"Chính 64 MP & Phụ 8 MP, 2 MP, 2 MP",32 MP,Snapdragon 765G,8 GB,128 GB,2 Nano SIM,4300 mAh,65 W,8.990.000₫ ,3.5,86
 Điện thoại Samsung Galaxy A33 5G 6GB,Samsung,"Super AMOLED,6.4"",Full HD+",Android 12,"Chính 48 MP & Phụ 8 MP, 5 MP, 2 MP",13 MP,Exynos 1280 8 nhân,6 GB,128 GB,2 Nano SIM (SIM 2 chung khe thẻ nhớ),5000 mAh,25 W,8.490.000₫ ,NULL,0
@@ -46,9 +46,9 @@ Name,Brand,Display,HDH,Camera sau,Camera trước,Chip,Ram,Rom,Sim,Battery,Charg
 Điện thoại Vivo Y72 5G,Vivo,"IPS LCD,6.58"",Full HD+",Android 11,"Chính 64 MP & Phụ 8 MP, 2 MP",16 MP,MediaTek Dimensity 700,8 GB,128 GB,2 Nano SIM (SIM 2 chung khe thẻ nhớ),5000 mAh,18 W,7.990.000₫ ,3.5,88
 Điện thoại Xiaomi Mi 11 Lite,Xiaomi,"AMOLED,6.55"",Full HD+",Android 11,"Chính 64 MP & Phụ 8 MP, 5 MP",16 MP,Snapdragon 732G,8 GB,128 GB,2 Nano SIM (SIM 2 chung khe thẻ nhớ),4250 mAh,33 W,7.990.000₫ ,3.2,869
 Điện thoại Vivo V23e,Vivo,"AMOLED,6.44"",Full HD+",Android 11,"Chính 64 MP & Phụ 8 MP, 2 MP",50 MP,MediaTek Helio G96 8 nhân,8 GB,128 GB,2 Nano SIM (SIM 2 chung khe thẻ nhớ),4050 mAh,44 W,7.790.000₫ ,3.9,131
-Điện thoại Xiaomi Redmi Note 10 Pro (8GB/128GB),Xiaomi,"AMOLED,6.67"",Full HD+",Android 11,"Chính 108 MP & Phụ 8 MP, 5 MP, 2 MP",16 MP,Snapdragon 732G,8 GB,128 GB,2 Nano SIM,5020 mAh,33 W,7.490.000₫ ,3.1,763
 Điện thoại Realme 9 Pro 5G,Realme,"IPS LCD,6.6"",Full HD+",Android 12,"Chính 64 MP & Phụ 8 MP, 2 MP",16 MP,Snapdragon 695 5G 8 nhân,8 GB,128 GB,2 Nano SIM (SIM 2 chung khe thẻ nhớ),5000 mAh,33 W,7.990.000₫,3.8,14
 Điện thoại Vivo V20 (2021),Vivo,"AMOLED,6.44"",Full HD+",Android 11,"Chính 64 MP & Phụ 8 MP, 2 MP",44 MP,Snapdragon 730,8 GB,128 GB,2 Nano SIM,4000 mAh,33 W,7.490.000₫ ,3.2,70
+Điện thoại Xiaomi Redmi Note 10 Pro (8GB/128GB),Xiaomi,"AMOLED,6.67"",Full HD+",Android 11,"Chính 108 MP & Phụ 8 MP, 5 MP, 2 MP",16 MP,Snapdragon 732G,8 GB,128 GB,2 Nano SIM,5020 mAh,33 W,7.490.000₫ ,3.1,764
 Điện thoại Realme 8,Realme,"Super AMOLED,6.4"",Full HD+",Android 11,"Chính 64 MP & Phụ 8 MP, 2 MP, 2 MP",16 MP,MediaTek Helio G95,8 GB,128 GB,2 Nano SIM,5000 mAh,30 W,7.290.000₫ ,3.4,156
 Điện thoại Vivo Y53s,Vivo,"IPS LCD,6.58"",Full HD+",Android 11,"Chính 64 MP & Phụ 2 MP, 2 MP",16 MP,MediaTek Helio G80,8 GB,128 GB,2 Nano SIM,5000 mAh,33 W,6.990.000₫ ,2.2,65
 Điện thoại OPPO A95,OPPO,"AMOLED,6.43"",Full HD+",Android 11,"Chính 48 MP & Phụ 2 MP, 2 MP",16 MP,Snapdragon 662,8 GB,128 GB,2 Nano SIM,5000 mAh,33 W,6.990.000₫ ,4.1,260
@@ -56,3 +56,22 @@ Name,Brand,Display,HDH,Camera sau,Camera trước,Chip,Ram,Rom,Sim,Battery,Charg
 Điện thoại Samsung Galaxy A32,Samsung,"Super AMOLED,6.4"",Full HD+",Android 11,"Chính 64 MP & Phụ 8 MP, 5MP, 5MP",20 MP,MediaTek Helio G80,6 GB,128 GB,2 Nano SIM,5000 mAh,15 W,6.490.000₫,3.1,740
 Điện thoại Xiaomi Redmi Note 10S 6GB,Xiaomi,"AMOLED,6.43"",Full HD+",Android 11,"Chính 64 MP & Phụ 8 MP, 2 MP, 2 MP",13 MP,MediaTek Helio G95,6 GB,128 GB,2 Nano SIM,5000 mAh,33 W,5.990.000₫ ,4.1,120
 Điện thoại OPPO A76,OPPO,"IPS LCD,6.56"",HD+",Android 11,Chính 13 MP & Phụ 2 MP,8 MP,Snapdragon 680 8 nhân,6 GB,128 GB,2 Nano SIM,5000 mAh,33 W,5.990.000₫ ,4.5,38
+Điện thoại Samsung Galaxy A23 4GB,Samsung,"PLS TFT LCD,6.6"",Full HD+",Android 12,"Chính 50 MP & Phụ 5 MP, 2 MP, 2 MP",8 MP,Snapdragon 680 8 nhân,4 GB,128 GB,2 Nano SIM,5000 mAh,25 W,5.490.000₫ ,3.8,33
+Điện thoại Realme 9i (4GB/64GB),Realme,"IPS LCD,6.6"",Full HD+",Android 11,"Chính 50 MP & Phụ 2 MP, 2 MP",16 MP,Snapdragon 680 8 nhân,4 GB,64 GB,2 Nano SIM,5000 mAh,33 W,5.490.000₫ ,NULL,0
+Điện thoại Samsung Galaxy A22,Samsung,"Super AMOLED,6.4"",HD+",Android 11,"Chính 48 MP & Phụ 8 MP, 2 MP, 2 MP",13 MP,MediaTek MT6769V,6 GB,128 GB,2 Nano SIM,5000 mAh,15 W,5.290.000₫ ,3.4,328
+Điện thoại Realme C25s,Realme,"IPS LCD,6.5"",HD+",Android 11,"Chính 48 MP & Phụ 2 MP, 2 MP",8 MP,MediaTek Helio G85,4 GB,128 GB,2 Nano SIM,6000 mAh,18 W,4.990.000₫ ,3.8,44
+Điện thoại OPPO A55,OPPO,"IPS LCD,6.5"",HD+",Android 11,"Chính 50 MP & Phụ 2 MP, 2 MP",16 MP,MediaTek Helio G35,4 GB,64 GB,2 Nano SIM,5000 mAh,18 W,4.990.000₫ ,3.6,264
+Điện thoại Samsung Galaxy A13 4GB,Samsung,"PLS TFT LCD,6.6"",Full HD+",Android 12,"Chính 50 MP & Phụ 5 MP, 2 MP, 2 MP",8 MP,Exynos 850,4 GB,128 GB,2 Nano SIM,5000 mAh,15 W,4.490.000₫ ,3.6,27
+Điện thoại Xiaomi Redmi Note 11 (4GB/64GB),Xiaomi,"AMOLED,6.43"",Full HD+",Android 11,"Chính 50  MP & Phụ 8 MP, 2 MP, 2 MP",13 MP,Snapdragon 680 8 nhân,4 GB,64 GB,2 Nano SIM,5000 mAh,33 W,4.490.000₫ ,4,251
+Điện thoại Realme C25Y 64GB,Realme,"IPS LCD,6.5"",HD+",Android 11,"Chính 50 MP & Phụ 2 MP, 2 MP",8 MP,Unisoc T618 8 nhân,4 GB,64 GB,2 Nano SIM,5000 mAh,18 W,4.690.000₫,2.3,10
+Điện thoại Xiaomi Redmi 10 (4GB/128GB),Xiaomi,"IPS LCD,6.5"",Full HD+",Android 11,"Chính 50  MP & Phụ 8 MP, 2 MP, 2 MP",8 MP,MediaTek Helio G88 8 nhân,4 GB,128 GB,2 Nano SIM,5000 mAh,18 W,4.290.000₫ ,3.7,210
+Điện thoại OPPO A15s,OPPO,"IPS LCD,6.52"",HD+",Android 10,"Chính 13 MP & Phụ 2 MP, 2 MP",8 MP,MediaTek Helio P35,4 GB,64 GB,2 Nano SIM,4230 mAh,10 W,4.290.000₫ ,2.9,138
+Điện thoại Vivo Y21,Vivo,"IPS LCD,6.51"",HD+",Android 11,Chính 13 MP & Phụ 2 MP,8 MP,MediaTek Helio P35,4 GB,64 GB,2 Nano SIM,5000 mAh,18 W,4.290.000₫ ,3.4,172
+Điện thoại Nokia G21,Nokia,"TFT LCD,6.5"",HD+",Android 11,"Chính 50 MP & Phụ 2 MP, 2 MP",8 MP,Unisoc T606 8 nhân,4 GB,128 GB,2 Nano SIM,5050 mAh,18 W,3.990.000₫ ,NULL,0
+Điện thoại OPPO A16,OPPO,"IPS LCD,6.52"",HD+",Android 11,"Chính 13 MP & Phụ 2 MP, 2 MP",8 MP,MediaTek Helio G35,3 GB,32 GB,2 Nano SIM,5000 mAh,10 W,3.990.000₫ ,4.4,59
+Điện thoại Samsung Galaxy A12 4GB (2021),Samsung,"PLS TFT LCD,6.5"",HD+",Android 11,"Chính 48 MP & Phụ 5 MP, 2 MP, 2 MP",8 MP,Exynos 850,4 GB,128 GB,2 Nano SIM,5000 mAh,15 W,3.690.000₫ ,4,257
+Điện thoại Nokia G10,Nokia,"TFT LCD,6.5"",HD+",Android 11,"Chính 13 MP & Phụ 2 MP, 2 MP",8 MP,MediaTek Helio G25,4 GB,64 GB,2 Nano SIM,5050 mAh,10 W,3.690.000₫ ,3.2,16
+Điện thoại Nokia G11,Nokia,"TFT LCD,6.5"",HD+",Android 11,"Chính 13 MP & Phụ 2 MP, 2 MP",8 MP,Unisoc T606 8 nhân,4 GB,64 GB,2 Nano SIM,5050 mAh,18 W,3.590.000₫ ,NULL,0
+Điện thoại Realme C21Y 3GB,Realme,"IPS LCD,6.5"",HD+",Android 11,"Chính 13 MP & Phụ 2 MP, 2 MP",5 MP,Spreadtrum T610 8 nhân,3 GB,32 GB,2 Nano SIM,5000 mAh,10 W,3.690.000₫,2.7,41
+Điện thoại Xiaomi Redmi 10C 64GB,Xiaomi,"IPS LCD,6.71"",HD+",Android 11,Chính 50 MP & Phụ 2 MP,5 MP,Snapdragon 680 8 nhân,4 GB,64 GB,2 Nano SIM,5000 mAh,18 W,3.490.000₫ ,4.3,32
+Điện thoại Realme C21-Y 3GB,Realme,"IPS LCD,6.5"",HD+",Android 11,"Chính 13 MP & Phụ 2 MP, 2 MP",5 MP,Spreadtrum T610 8 nhân,3 GB,32 GB,2 Nano SIM,5000 mAh,10 W,3.690.000₫,3.7,15
