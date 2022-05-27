@@ -7,8 +7,16 @@
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"type="text/css"/>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"type="text/css"/>
+    <link
+      rel="stylesheet"
+      href="{% static 'css/bootstrap.min.css' %}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/style.css' %}"
+      type="text/css"
+    />
     <script src="{%static 'js/bootstrap.min.js' %}"></script>
     <script src="{%static 'js/jquery-3.6.0.min.js' %}"></script>
     <style type="text/css">
@@ -17,10 +25,18 @@
       }
     </style>
   </head>
-<body>
+  <body>
+    <input type="text" placeholder="link trang web">
+    <br>
     <center><h3>Bảng thống kê thông tin điện thoại</h3></center>
-    <form method="get" action="/theoDanhGia"><button type="submit">Lọc theo đánh giá</button></form>
-    <form method="get" action="/theoHieuNang"><button type="submit">Lọc theo hiệu năng</button></form>
+    <form method="get" action="/theoDanhGia">
+      <button type="submit">Lọc theo đánh giá</button>
+    </form>
+    <form method="get" action="/theoHieuNang">
+      <button type="submit">Lọc theo hiệu năng</button>
+    </form>
+    
+
     <table class="table table-bordered mt60">
       <thead class="bg-color text-bold td">
         <tr>

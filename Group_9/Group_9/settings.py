@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'members.apps.MembersConfig',
     'theoDanhGia.apps.TheodanhgiaConfig',
-    'theoHieuNang.apps.TheohieunangConfig'
+    'theoHieuNang.apps.TheohieunangConfig',
+    'theoDoanhThu.apps.TheodoanhthuConfig',
 ]
 
 MIDDLEWARE = [
