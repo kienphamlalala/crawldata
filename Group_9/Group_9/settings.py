@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'Group_9.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'du_lieu_dt.db',
+        'NAME': 'dienthoai.db',
     }
 }
 
