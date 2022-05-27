@@ -1,4 +1,3 @@
-
 #%%
 import sqlite3
 from black import GitWildMatchPatternError
@@ -28,7 +27,6 @@ c.execute("""CREATE TABLE IF NOT EXISTS dienthoai2(
             rom TEXT,
             sim TEXT,
             battery TEXT,
-            charge TEXT,
             price INTEGER,
             danhgia TEXT,
             sluong TEXT,
@@ -42,7 +40,7 @@ driver=webdriver.Edge('D:\VISUAL\python\CrawlDataFromWeb\msedgedriver.exe')
 
 def crawl_tgdd(dienthoai):
     with conn:
-        c.execute(sql_insert,{'name':dienthoai.name,'brand':dienthoai.brand,'display':dienthoai.display,'hdh':dienthoai.hdh,'camera_sau':dienthoai.camera_sau,'camera_truoc':dienthoai.camera_truoc,'chip':dienthoai.chip,'ram':dienthoai.ram,'rom':dienthoai.rom,'sim':dienthoai.sim,'battery':dienthoai.battery,'charge':dienthoai.charge,'price':dienthoai.price,'danhgia':dienthoai.danhgia,'sluong':dienthoai.sluong,'link':dienthoai.link})
+        c.execute(sql_insert,{'name':dienthoai.name,'brand':dienthoai.brand,'display':dienthoai.display,'hdh':dienthoai.hdh,'camera_sau':dienthoai.camera_sau,'camera_truoc':dienthoai.camera_truoc,'chip':dienthoai.chip,'ram':dienthoai.ram,'rom':dienthoai.rom,'sim':dienthoai.sim,'battery':dienthoai.battery,'price':dienthoai.price,'danhgia':dienthoai.danhgia,'sluong':dienthoai.sluong,'link':dienthoai.link})
 #driver=webdriver.Edge('D:\VISUAL\python\CrawlDataFromWeb\msedgedriver.exe')
 url='https://www.thegioididong.com'
 driver.get(url)
@@ -151,18 +149,11 @@ for url in Url_all:
 
             continue
     #INSERT ALL DATA TO DATABASE
-    print(name ,brand,display2,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,charge,gia,danhgia,sluong,link,nameshop)
-    sql_insert=f"""INSERT INTO dienthoai2 VALUES (:name,:brand,:display,:hdh,:camera_sau,:camera_truoc,:chip,:ram,:rom,:sim,:battery,:charge,:price,:danhgia,:sluong,:link)"""
-    dt1= dienthoai (name,brand,display2,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,charge,gia,danhgia,sluong,link)
+    print(name ,brand,display2,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,gia,danhgia,sluong,link,nameshop)
+    sql_insert=f"""INSERT INTO dienthoai2 VALUES (:name,:brand,:display,:hdh,:camera_sau,:camera_truoc,:chip,:ram,:rom,:sim,:battery,:price,:danhgia,:sluong,:link)"""
+    dt1= dienthoai (name,brand,display2,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,gia,danhgia,sluong,link)
     
     crawl_tgdd(dt1)
     
    
 c.close()   
-    
-    
-
-    
-
-
-# %%
