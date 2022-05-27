@@ -9,7 +9,7 @@ from django.db import models
 
 
 class Dt3(models.Model):
-    id = models.IntegerField(db_column='ID', blank=True, null = False , primary_key=True)  # Field name made lowercase.
+    #id = models.IntegerField(db_column='ID', blank=True, null = False , primary_key=True)  # Field name made lowercase.
     
     name = models.TextField(db_column='Name', blank=True, null=True)  # Field name made lowercase.
     brand = models.TextField(db_column='Brand', blank=True, null=True)  # Field name made lowercase.
