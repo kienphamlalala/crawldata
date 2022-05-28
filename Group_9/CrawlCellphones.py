@@ -8,7 +8,7 @@ import sqlite3
 from classdt import dienthoai
 
 # Open web automaticly
-def crawl_Cellphones():
+def crawl_Cellphones(numPg):
     conn = sqlite3.connect('dienthoai.db')
     c = conn.cursor()
     c.execute("""CREATE TABLE IF NOT EXISTS dienthoai1(
@@ -55,7 +55,7 @@ def crawl_Cellphones():
         return all_prod
 
 
-    numPg=3
+    
     Url_all=[]
     for i in range(numPg):
         #sroll down until found element next button 

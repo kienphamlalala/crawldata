@@ -11,7 +11,7 @@ import time
 from classdt import *
 
 #create table dienthoai.db trong sqlite3
-def crawl_cua_tgdd():
+def crawl_cua_tgdd(numPg):
     try:
         conn = sqlite3.connect('dienthoai.db')
         c = conn.cursor()
@@ -41,7 +41,8 @@ def crawl_cua_tgdd():
 
         def crawl_tgdd(dienthoai):
             with conn:
-                c.execute(sql_insert,{'name':dienthoai.name,'brand':dienthoai.brand,'display':dienthoai.display,'hdh':dienthoai.hdh,'camera_sau':dienthoai.camera_sau,'camera_truoc':dienthoai.camera_truoc,'chip':dienthoai.chip,'ram':dienthoai.ram,'rom':dienthoai.rom,'sim':dienthoai.sim,'battery':dienthoai.battery,'price':dienthoai.price,'danhgia':dienthoai.danhgia,'sluong':dienthoai.sluong,'link':dienthoai.link})
+                id=1
+                c.execute(sql_insert,{'ID':id,'name':dienthoai.name,'brand':dienthoai.brand,'display':dienthoai.display,'hdh':dienthoai.hdh,'camera_sau':dienthoai.camera_sau,'camera_truoc':dienthoai.camera_truoc,'chip':dienthoai.chip,'ram':dienthoai.ram,'rom':dienthoai.rom,'sim':dienthoai.sim,'battery':dienthoai.battery,'price':dienthoai.price,'danhgia':dienthoai.danhgia,'sluong':dienthoai.sluong,'link':dienthoai.link})
         #driver=webdriver.Edge('D:\VISUAL\python\CrawlDataFromWeb\msedgedriver.exe')
         url='https://www.thegioididong.com'
         driver.get(url)
@@ -64,7 +65,7 @@ def crawl_cua_tgdd():
             set(all_prod)
             return all_prod
 
-        numPg=5
+   
             
         Url_all=[]
         
@@ -76,7 +77,7 @@ def crawl_cua_tgdd():
         Url_each_page=GetUrl() 
 
         Url_all=Url_all+Url_each_page  
-
+        time.sleep(3)
         for url in Url_all:
             driver.get(url) #mở web chứa các thông tin chi tiết
             page_source=BeautifulSoup(driver.page_source,"html.parser") #dùng bs4 tải toàn bộ HTML document lên chương trình
@@ -151,21 +152,18 @@ def crawl_cua_tgdd():
                     continue
             #INSERT ALL DATA TO DATABASE
             print(name ,brand,display2,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,gia,danhgia,sluong,link,nameshop)
-            try:
-
-                sql_insert=f"""INSERT INTO dienthoai2 VALUES (:name,:brand,:display,:hdh,:camera_sau,:camera_truoc,:chip,:ram,:rom,:sim,:battery,:price,:danhgia,:sluong,:link)"""
-                dt1= dienthoai (name,brand,display2,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,gia,danhgia,sluong,link)
-            except TypeError:
-                    c.close() 
+            sql_insert=f"""INSERT INTO dienthoai2 VALUES (:ID,:name,:brand,:display,:hdh,:camera_sau,:camera_truoc,:chip,:ram,:rom,:sim,:battery,:price,:danhgia,:sluong,:link)"""
+            dt1= dienthoai (name,brand,display2,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,gia,danhgia,sluong,link)
             
             crawl_tgdd(dt1)
             
     except IndexError:
         c.close()
         #driver.close()
-   
+    except TypeError:
+        c.close() 
         
-    
+   
        
 
 

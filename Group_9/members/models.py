@@ -30,4 +30,4 @@ class Dt3(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'dienthoai1'
+        db_table = 'dienthoai2'
