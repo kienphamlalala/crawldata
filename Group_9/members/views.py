@@ -7,7 +7,7 @@ import crawlTGDD
 import locdienthoai
 link_name=""
 def index(request):
-  mymembers = Dt3.objects.all().values()
+  mymembers = Dt1.objects.all().values()
   template = loader.get_template('index.html')
   context = {
     'mymembers': mymembers,
@@ -49,20 +49,46 @@ def crawl_TGDD(request):
       return HttpResponse(template.render(context, request))
     #return HttpResponse("""<html><script>window.location.replace('/');</script></html>""")
 def filterdanhgia(request):
-  link_name="TGDD"
+  link_name=request.GET['nameshop']
+  danhgia=request.GET['danhgia']
+  if(danhgia==""):
+    danhgia=0
+  else:
+    danhgia=float(danhgia)
+  giadau=request.GET['giadautien']
+  giadau=int(giadau)
+  giacuoi=request.GET['giacuoi']
+  giacuoi=int(giacuoi)
   if (link_name=="TGDD"):
-    giadau=request.GET['giadautien']
-    giadau=int(giadau)
-    giacuoi=request.GET['giacuoi']
-    giacuoi=int(giacuoi)
     tensql="dienthoai.db"
     tenbang="dienthoai1"
-    a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi)
+    a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi,danhgia)
     mymembers = Dt4.objects.all().values()
     template = loader.get_template('index.html')
     context = {
       'mymembers': mymembers,
       }
     return HttpResponse(template.render(context, request))
-
+  elif (link_name=="FPT"):
+    tensql="dienthoai.db"
+    tenbang="dienthoai3"
+    a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi,danhgia)
+    mymembers = Dt4.objects.all().values()
+    template = loader.get_template('index.html')
+    context = {
+      'mymembers': mymembers,
+      }
+    return HttpResponse(template.render(context, request))
+  elif (link_name=="cellphones"):
+    tensql="dienthoai.db"
+    tenbang="dienthoai2"
+    a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi,danhgia)
+    mymembers = Dt4.objects.all().values()
+    template = loader.get_template('index.html')
+    context = {
+      'mymembers': mymembers,
+      }
+    return HttpResponse(template.render(context, request))
+  elif (link_name==""):
+    return  HttpResponse("""Mời bạn điền thông tin""")
     
