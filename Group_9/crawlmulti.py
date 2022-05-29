@@ -11,11 +11,15 @@ import time
 from classdt import *
 
 #create table dienthoai.db trong sqlite3
+def deletetable():
+    conn = sqlite3.connect('dienthoai.db')
+    c = conn.cursor()
+    c.execute("DELETE FROM dienthoaiall")
 def crawl_cua_tgdd(numPg):
     try:
         conn = sqlite3.connect('dienthoai.db')
         c = conn.cursor()
-        c.execute("""CREATE TABLE IF NOT EXISTS dienthoai1(
+        c.execute("""CREATE TABLE IF NOT EXISTS dienthoaiall(
                     
                     name TEXT,
                     brand TEXT,
@@ -35,7 +39,7 @@ def crawl_cua_tgdd(numPg):
                     )""")
         #create class dienthoai
         #delete all data in table dienthoai2.db
-        c.execute("DELETE FROM dienthoai1")
+        #c.execute("DELETE FROM dienthoaiall")
 
         driver=webdriver.Edge('D:\VISUAL\python\CrawlDataFromWeb\msedgedriver.exe')
 
@@ -152,10 +156,11 @@ def crawl_cua_tgdd(numPg):
                     continue
             #INSERT ALL DATA TO DATABASE
             print(name ,brand,display2,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,gia,danhgia,sluong,link,nameshop)
-            sql_insert=f"""INSERT INTO dienthoai1 VALUES (:ID,:name,:brand,:display,:hdh,:camera_sau,:camera_truoc,:chip,:ram,:rom,:sim,:battery,:price,:danhgia,:sluong,:link)"""
+            sql_insert=f"""INSERT INTO dienthoaiall VALUES (:ID,:name,:brand,:display,:hdh,:camera_sau,:camera_truoc,:chip,:ram,:rom,:sim,:battery,:price,:danhgia,:sluong,:link)"""
             dt1= dienthoai (name,brand,display2,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,gia,danhgia,sluong,link)
             
             crawl_tgdd(dt1)
+            break
             
     except IndexError:
         c.close()
@@ -167,7 +172,7 @@ def crawl_Cellphones(numPg):
 
         conn = sqlite3.connect('dienthoai.db')
         c = conn.cursor()
-        c.execute("""CREATE TABLE IF NOT EXISTS dienthoai2(
+        c.execute("""CREATE TABLE IF NOT EXISTS dienthoaiall(
                     
                     name TEXT,
                     brand TEXT,
@@ -186,7 +191,7 @@ def crawl_Cellphones(numPg):
                     sluong TEXT,
                     link TEXT
                     )""")
-        c.execute("DELETE FROM dienthoai2")
+        #c.execute("DELETE FROM dienthoaiall")
         def crawl_cellphones(dienthoai):
             with conn:
                 id=1
@@ -273,10 +278,11 @@ def crawl_Cellphones(numPg):
             
                 brand=brand.strip()
                 print(name,brand,display,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,gia,danhgia,soluong,link)
-                sql_insert="INSERT INTO dienthoai2 VALUES(:ID,:name,:brand,:display,:hdh,:camera_sau,:camera_truoc,:chip,:ram,:rom,:sim,:battery,:price,:danhgia,:sluong,:link)"
+                sql_insert="INSERT INTO dienthoaiall VALUES(:ID,:name,:brand,:display,:hdh,:camera_sau,:camera_truoc,:chip,:ram,:rom,:sim,:battery,:price,:danhgia,:sluong,:link)"
                 dt1= dienthoai (name,brand,display,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,gia,danhgia,soluong,link)
 
                 crawl_cellphones(dt1)
+                break
           
     
     except IndexError:
@@ -289,7 +295,7 @@ def Crawl_cua_FPT(numPg):
     try:
         conn = sqlite3.connect('dienthoai.db')
         c = conn.cursor()
-        c.execute("""CREATE TABLE IF NOT EXISTS dienthoai3(
+        c.execute("""CREATE TABLE IF NOT EXISTS dienthoaiall(
                     
                     name TEXT,
                     brand TEXT,
@@ -310,7 +316,7 @@ def Crawl_cua_FPT(numPg):
                     )""")
         #create class dienthoai
         #delete all data in table dienthoai2.db
-        c.execute("DELETE FROM dienthoai3")
+        #c.execute("DELETE FROM dienthoaiall")
         def crawl_tgdd(dienthoai):
             with conn:
                 id=1
@@ -407,7 +413,7 @@ def Crawl_cua_FPT(numPg):
             link=url
             #INSERT ALL DATA TO DATABASE
             print(name,brand,display,hdh,camera_sau,camera_truoc,cpu,ram,rom,sim,battery,gia,danhgia,soluong,link)
-            sql_insert="INSERT INTO dienthoai3 VALUES(:ID,:name,:brand,:display,:hdh,:camera_sau,:camera_truoc,:chip,:ram,:rom,:sim,:battery,:price,:danhgia,:sluong,:link)"
+            sql_insert="INSERT INTO dienthoaiall VALUES(:ID,:name,:brand,:display,:hdh,:camera_sau,:camera_truoc,:chip,:ram,:rom,:sim,:battery,:price,:danhgia,:sluong,:link)"
             dt1= dienthoai (name,brand,display,hdh,camera_sau,camera_truoc,cpu,ram,rom,sim,battery,gia,danhgia,soluong,link)
             
             crawl_tgdd(dt1)
