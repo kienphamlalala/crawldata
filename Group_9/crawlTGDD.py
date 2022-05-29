@@ -15,7 +15,7 @@ def crawl_cua_tgdd(numPg):
     try:
         conn = sqlite3.connect('dienthoai.db')
         c = conn.cursor()
-        c.execute("""CREATE TABLE IF NOT EXISTS dienthoai2(
+        c.execute("""CREATE TABLE IF NOT EXISTS dienthoai1(
                     
                     name TEXT,
                     brand TEXT,
@@ -35,7 +35,7 @@ def crawl_cua_tgdd(numPg):
                     )""")
         #create class dienthoai
         #delete all data in table dienthoai2.db
-        c.execute("DELETE FROM dienthoai2")
+        c.execute("DELETE FROM dienthoai1")
 
         driver=webdriver.Edge('D:\VISUAL\python\CrawlDataFromWeb\msedgedriver.exe')
 
@@ -152,7 +152,7 @@ def crawl_cua_tgdd(numPg):
                     continue
             #INSERT ALL DATA TO DATABASE
             print(name ,brand,display2,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,gia,danhgia,sluong,link,nameshop)
-            sql_insert=f"""INSERT INTO dienthoai2 VALUES (:ID,:name,:brand,:display,:hdh,:camera_sau,:camera_truoc,:chip,:ram,:rom,:sim,:battery,:price,:danhgia,:sluong,:link)"""
+            sql_insert=f"""INSERT INTO dienthoai1 VALUES (:ID,:name,:brand,:display,:hdh,:camera_sau,:camera_truoc,:chip,:ram,:rom,:sim,:battery,:price,:danhgia,:sluong,:link)"""
             dt1= dienthoai (name,brand,display2,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,gia,danhgia,sluong,link)
             
             crawl_tgdd(dt1)
@@ -167,7 +167,7 @@ def crawl_Cellphones(numPg):
 
         conn = sqlite3.connect('dienthoai.db')
         c = conn.cursor()
-        c.execute("""CREATE TABLE IF NOT EXISTS dienthoai1(
+        c.execute("""CREATE TABLE IF NOT EXISTS dienthoai2(
                     
                     name TEXT,
                     brand TEXT,
@@ -186,7 +186,7 @@ def crawl_Cellphones(numPg):
                     sluong TEXT,
                     link TEXT
                     )""")
-        
+        c.execute("DELETE FROM dienthoai2")
         def crawl_cellphones(dienthoai):
             with conn:
                 id=1
@@ -220,7 +220,7 @@ def crawl_Cellphones(numPg):
             driver.execute_script("window.scrollBy(0, -150);")
             e=driver.find_element_by_xpath("/html/body/div[1]/div/section/div/div[5]/div/a")
             e.click()
-        time.sleep(13)
+        time.sleep(3)
 
         Url_all=[]
         Url_all =GetUrl()
@@ -251,10 +251,9 @@ def crawl_Cellphones(numPg):
                 dgtmp=page_source.find_all('div',class_='chart-vote__box-left')[0].get_text()
                 danhgia=dgtmp.split('/')
                 danhgia=float(danhgia[0])
-                
-                nameshop='Cellphones'
+              
                 link=url
-                brand=name.split(' ')[0]
+                
                 try:
                         giatmp=page_source.find_all('p',class_='special-price')[0].get_text()
                         gia=giatmp.replace('₫','')
@@ -266,13 +265,19 @@ def crawl_Cellphones(numPg):
                         
                 except IndexError:
                         continue
-                brand=brand.strip()
                 name=name.strip()
+
+        
+                name=name.replace('\n','')
+                brand=name.split(' ')[0]
+            
+                brand=brand.strip()
                 print(name,brand,display,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,gia,danhgia,soluong,link)
-                sql_insert="INSERT INTO dienthoai1 VALUES(:ID,:name,:brand,:display,:hdh,:camera_sau,:camera_truoc,:chip,:ram,:rom,:sim,:battery,:price,:danhgia,:sluong,:link)"
+                sql_insert="INSERT INTO dienthoai2 VALUES(:ID,:name,:brand,:display,:hdh,:camera_sau,:camera_truoc,:chip,:ram,:rom,:sim,:battery,:price,:danhgia,:sluong,:link)"
                 dt1= dienthoai (name,brand,display,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,gia,danhgia,soluong,link)
 
                 crawl_cellphones(dt1)
+          
     
     except IndexError:
         c.close()
@@ -305,7 +310,7 @@ def Crawl_cua_FPT(numPg):
                     )""")
         #create class dienthoai
         #delete all data in table dienthoai2.db
-        #c.execute("DELETE FROM dienthoai3")
+        c.execute("DELETE FROM dienthoai3")
         def crawl_tgdd(dienthoai):
             with conn:
                 id=1
@@ -357,7 +362,9 @@ def Crawl_cua_FPT(numPg):
             name=page_source.find_all('h1',class_='st-name')[0].get_text()
             name=name.split(' ')
             brand=name[0]
-            name2=name.pop(-1)
+            if(brand=="Oppo"):
+                brand="OPPO"
+            
             name=" ".join(name)
             ram=div1.find_all('td')[7].get_text()
             rom=div1.find_all('td')[9].get_text()
@@ -378,7 +385,6 @@ def Crawl_cua_FPT(numPg):
             camera_truoc=div1.find_all('td')[5].get_text()
 
 
-            nameshop="Cửa hàng FPT"
 
 
             gia_tmp=page_source.find_all('div',class_='st-price-main')[0].get_text()
@@ -401,7 +407,7 @@ def Crawl_cua_FPT(numPg):
             link=url
             #INSERT ALL DATA TO DATABASE
             print(name,brand,display,hdh,camera_sau,camera_truoc,cpu,ram,rom,sim,battery,gia,danhgia,soluong,link)
-            sql_insert="INSERT INTO dienthoai3 VALUES(:name,:brand,:display,:hdh,:camera_sau,:camera_truoc,:chip,:ram,:rom,:sim,:battery,:price,:danhgia,:sluong,:link)"
+            sql_insert="INSERT INTO dienthoai3 VALUES(:ID,:name,:brand,:display,:hdh,:camera_sau,:camera_truoc,:chip,:ram,:rom,:sim,:battery,:price,:danhgia,:sluong,:link)"
             dt1= dienthoai (name,brand,display,hdh,camera_sau,camera_truoc,cpu,ram,rom,sim,battery,gia,danhgia,soluong,link)
             
             crawl_tgdd(dt1)

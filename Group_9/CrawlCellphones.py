@@ -63,7 +63,7 @@ def crawl_Cellphones(numPg):
         driver.execute_script("window.scrollBy(0, -150);")
         e=driver.find_element_by_xpath("/html/body/div[1]/div/section/div/div[5]/div/a")
         e.click()
-    time.sleep(13)
+    time.sleep(1)
 
     Url_all=[]
     Url_all =GetUrl()
@@ -110,12 +110,14 @@ def crawl_Cellphones(numPg):
             except IndexError:
                     continue
             brand=brand.strip()
+            print('NHAN HIEU:',brand)
             name=name.strip()
             print(name,brand,display,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,gia,danhgia,soluong,link)
             sql_insert="INSERT INTO dienthoai1 VALUES(:name,:brand,:display,:hdh,:camera_sau,:camera_truoc,:chip,:ram,:rom,:sim,:battery,:price,:danhgia,:sluong,:link)"
             dt1= dienthoai (name,brand,display,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,gia,danhgia,soluong,link)
 
             crawl_cellphones(dt1)
+            break
 
      
                 
