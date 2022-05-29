@@ -10,7 +10,7 @@ import time
 
 from classdt import *
 
-#create table dienthoai.db trong sqlite3
+
 def deletetable():
     conn = sqlite3.connect('dienthoai.db')
     c = conn.cursor()
@@ -160,7 +160,7 @@ def crawl_cua_tgdd(numPg):
             dt1= dienthoai (name,brand,display2,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,gia,danhgia,sluong,link)
             
             crawl_tgdd(dt1)
-            break
+          
             
     except IndexError:
         c.close()
@@ -282,7 +282,7 @@ def crawl_Cellphones(numPg):
                 dt1= dienthoai (name,brand,display,hdh,camera_sau,camera_truoc,chip,ram,rom,sim,battery,gia,danhgia,soluong,link)
 
                 crawl_cellphones(dt1)
-                break
+           
           
     
     except IndexError:

@@ -14,7 +14,6 @@ def index(request):
     'mymembers': mymembers,
   }
   return HttpResponse(template.render(context, request))
-
 def crawl_TGDD(request):
     name1=request.GET['linkname']
     link_name=name1.split(',')
@@ -107,46 +106,79 @@ def crawl_TGDD(request):
         }
         return HttpResponse(template.render(context, request))
 def filterdanhgia(request):
-  link_name=request.GET['nameshop']
-  danhgia=request.GET['danhgia']
-  if(danhgia==""):
-    danhgia=0
+  name1=request.GET['nameshop']
+  link_name=name1.split(',')
+  lenlk=len(link_name)
+  if (lenlk==1):
+    danhgia=request.GET['danhgia']
+    if(danhgia==""):
+      danhgia=0
+    else:
+      danhgia=float(danhgia)
+    giadau=request.GET['giadautien']
+    if( giadau==""):
+      giadau=0
+    else:
+      giadau=int(giadau)
+    giacuoi=request.GET['giacuoi']
+    if (giacuoi==""):
+      giacuoi=100000000
+    else:
+      giacuoi=int(giacuoi)
+    if (link_name[0]=="TGDD"):
+      tensql="dienthoai.db"
+      tenbang="dienthoai1"
+      a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi,danhgia)
+      mymembers = Dt4.objects.all().values()
+      template = loader.get_template('index.html')
+      context = {
+        'mymembers': mymembers,
+        }
+      return HttpResponse(template.render(context, request))
+    elif (link_name[0]=="FPT"):
+      tensql="dienthoai.db"
+      tenbang="dienthoai3"
+      a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi,danhgia)
+      mymembers = Dt4.objects.all().values()
+      template = loader.get_template('index.html')
+      context = {
+        'mymembers': mymembers,
+        }
+      return HttpResponse(template.render(context, request))
+    elif (link_name[0]=="cellphones"):
+      tensql="dienthoai.db"
+      tenbang="dienthoai2"
+      a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi,danhgia)
+      mymembers = Dt4.objects.all().values()
+      template = loader.get_template('index.html')
+      context = {
+        'mymembers': mymembers,
+        }
+      return HttpResponse(template.render(context, request))
+    elif (link_name[0]==""):
+      return  HttpResponse("""Mời bạn điền thông tin""")
   else:
-    danhgia=float(danhgia)
-  giadau=request.GET['giadautien']
-  giadau=int(giadau)
-  giacuoi=request.GET['giacuoi']
-  giacuoi=int(giacuoi)
-  if (link_name=="TGDD"):
+    danhgia=request.GET['danhgia']
+    if(danhgia==""):
+      danhgia=0
+    else:
+      danhgia=float(danhgia)
+    giadau=request.GET['giadautien']
+    if( giadau==""):
+      giadau=0
+    else:
+      giadau=int(giadau)
+    giacuoi=request.GET['giacuoi']
+    if (giacuoi==""):
+      giacuoi=100000000
+    else:
+      giacuoi=int(giacuoi)
     tensql="dienthoai.db"
-    tenbang="dienthoai1"
+    tenbang="dienthoaiall"
     a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi,danhgia)
-    mymembers = Dt4.objects.all().values()
+    mymembers = Dt5.objects.all().values()
     template = loader.get_template('index.html')
     context = {
       'mymembers': mymembers,
       }
     return HttpResponse(template.render(context, request))
-  elif (link_name=="FPT"):
-    tensql="dienthoai.db"
-    tenbang="dienthoai3"
-    a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi,danhgia)
-    mymembers = Dt4.objects.all().values()
-    template = loader.get_template('index.html')
-    context = {
-      'mymembers': mymembers,
-      }
-    return HttpResponse(template.render(context, request))
-  elif (link_name=="cellphones"):
-    tensql="dienthoai.db"
-    tenbang="dienthoai2"
-    a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi,danhgia)
-    mymembers = Dt4.objects.all().values()
-    template = loader.get_template('index.html')
-    context = {
-      'mymembers': mymembers,
-      }
-    return HttpResponse(template.render(context, request))
-  elif (link_name==""):
-    return  HttpResponse("""Mời bạn điền thông tin""")
-    
