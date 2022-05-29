@@ -176,8 +176,8 @@ def filterdanhgia(request):
       giacuoi=int(giacuoi)
     tensql="dienthoai.db"
     tenbang="dienthoaiall"
-    a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi,danhgia)
-    mymembers = Dt5.objects.all().values()
+    a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi,danhgia,brand)
+    mymembers = Dt4.objects.all().values()
     template = loader.get_template('index.html')
     context = {
       'mymembers': mymembers,
