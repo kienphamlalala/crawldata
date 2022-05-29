@@ -2,9 +2,10 @@ from ast import Num
 from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render
-from .models import Dt1, Dt2, Dt3
+from .models import Dt1, Dt2, Dt3, Dt4
 import crawlTGDD
-
+import locdienthoai
+link_name=""
 def index(request):
   mymembers = Dt3.objects.all().values()
   template = loader.get_template('index.html')
@@ -14,7 +15,6 @@ def index(request):
   return HttpResponse(template.render(context, request))
 
 def crawl_TGDD(request):
-    # get the number of pages from html page index.html
     link_name=request.GET['linkname']
     if link_name=='TGDD':
       
@@ -48,3 +48,21 @@ def crawl_TGDD(request):
       }
       return HttpResponse(template.render(context, request))
     #return HttpResponse("""<html><script>window.location.replace('/');</script></html>""")
+def filterdanhgia(request):
+  link_name="TGDD"
+  if (link_name=="TGDD"):
+    giadau=request.GET['giadautien']
+    giadau=int(giadau)
+    giacuoi=request.GET['giacuoi']
+    giacuoi=int(giacuoi)
+    tensql="dienthoai.db"
+    tenbang="dienthoai1"
+    a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi)
+    mymembers = Dt4.objects.all().values()
+    template = loader.get_template('index.html')
+    context = {
+      'mymembers': mymembers,
+      }
+    return HttpResponse(template.render(context, request))
+
+    

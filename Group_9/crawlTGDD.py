@@ -77,7 +77,7 @@ def crawl_cua_tgdd(numPg):
         Url_each_page=GetUrl() 
 
         Url_all=Url_all+Url_each_page  
-        time.sleep(3)
+        time.sleep(5)
         for url in Url_all:
             driver.get(url) #mở web chứa các thông tin chi tiết
             page_source=BeautifulSoup(driver.page_source,"html.parser") #dùng bs4 tải toàn bộ HTML document lên chương trình
@@ -284,7 +284,6 @@ def crawl_Cellphones(numPg):
         #driver.close()
     except TypeError:
         c.close()     
-   
 def Crawl_cua_FPT(numPg):
     try:
         conn = sqlite3.connect('dienthoai.db')
