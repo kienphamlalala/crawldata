@@ -6,13 +6,16 @@ import sqlite3
 
 # Create your connection.
 
-def loc(tensql,tenbang,giadau,giacuoi,danhgia):
+def loc(tensql,tenbang,giadau,giacuoi,danhgia,brand):
     cnx = sqlite3.connect(tensql)
 
     df2 = pd.read_sql_query("SELECT * FROM "+tenbang, cnx)
     #cast df['dangia'] to int
     df2['danhgia'] = df2['danhgia'].astype(float)
-    df2_tmp=df2.loc[(df2['price']<giacuoi)&(df2['price']>giadau)&(df2['danhgia']>=danhgia)]
+    if (brand!=""):
+        df2_tmp=df2.loc[(df2['price']<giacuoi)&(df2['price']>giadau)&(df2['danhgia']>=danhgia)&(df2['brand']==brand)]
+    else:
+        df2_tmp=df2.loc[(df2['price']<giacuoi)&(df2['price']>giadau)&(df2['danhgia']>=danhgia)]
     # most_brn=df2_tmp.loc[:,['Name','Brand','Gia','Danhgia','SoLuong','Tenhang','Link']]
 
     df2_tmp

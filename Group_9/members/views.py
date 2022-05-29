@@ -107,6 +107,7 @@ def crawl_TGDD(request):
         return HttpResponse(template.render(context, request))
 def filterdanhgia(request):
   name1=request.GET['nameshop']
+  brand=request.GET['brand']
   link_name=name1.split(',')
   lenlk=len(link_name)
   if (lenlk==1):
@@ -128,7 +129,7 @@ def filterdanhgia(request):
     if (link_name[0]=="TGDD"):
       tensql="dienthoai.db"
       tenbang="dienthoai1"
-      a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi,danhgia)
+      a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi,danhgia,brand)
       mymembers = Dt4.objects.all().values()
       template = loader.get_template('index.html')
       context = {
@@ -138,7 +139,7 @@ def filterdanhgia(request):
     elif (link_name[0]=="FPT"):
       tensql="dienthoai.db"
       tenbang="dienthoai3"
-      a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi,danhgia)
+      a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi,danhgia,brand)
       mymembers = Dt4.objects.all().values()
       template = loader.get_template('index.html')
       context = {
@@ -148,7 +149,7 @@ def filterdanhgia(request):
     elif (link_name[0]=="cellphones"):
       tensql="dienthoai.db"
       tenbang="dienthoai2"
-      a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi,danhgia)
+      a=locdienthoai.loc(tensql,tenbang,giadau,giacuoi,danhgia,brand)
       mymembers = Dt4.objects.all().values()
       template = loader.get_template('index.html')
       context = {
