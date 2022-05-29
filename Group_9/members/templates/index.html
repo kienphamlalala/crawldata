@@ -26,19 +26,27 @@
     </style>
   </head>
   <body>
-    
+    <br>
+    <center><h3>Crawl dữ liệu điện thoại</h3></center>
+    <br>
    
     <form action="/crawl_TGDD">
-        <center><input  type="text" name="linkname" placeholder="link trang web"></center>
-        <center>  <input type="text" name="page" placeholder="Enter the number of page" >
-          <center> <button type="submit" class="btn btn-primary">Crawl</button></center>
+      
+        
+        <center>Nhập tên shop:  <input  type="text" name="linkname" placeholder="FPT, cellphones, TGDD, all"></center><br>
+        <center>Nhập số trang:  <input type="text" name="page" placeholder="Enter the number of page" >
+          
+          <center> <br><button type="submit" class="btn btn-primary">Crawl</button>
+          <br>
+        </center>
+          <br>
         </form>
          <form action="/filterdanhgia">
-          <center>  <input type="text" name="nameshop" placeholder="Tên cửa hàng" >
-          <center>  <input type="text" name="giadautien" placeholder="Giá nhỏ nhất" >
-          <center>  <input type="text" name="giacuoi" placeholder="Giá lớn nhất" >
-          <center>  <input type="text" name="danhgia" placeholder="Đánh giá (có thế bỏ trống)" >
-          <center> <button type="submit" class="btn btn-primary">Lọc</button></center>
+           <input type="text" name="nameshop" placeholder="Tên cửa hàng" >
+          <input type="text" name="giadautien" placeholder="Giá nhỏ nhất" >
+            <input type="text" name="giacuoi" placeholder="Giá lớn nhất" >
+            <input type="text" name="danhgia" placeholder="Đánh giá (có thế bỏ trống)" >
+           <button type="submit" class="btn btn-primary">Lọc</button></center>
          </form>
 
     
