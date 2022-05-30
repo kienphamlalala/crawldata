@@ -30,8 +30,8 @@
     <center><h3>Crawl dữ liệu điện thoại</h3></center>
     <br>
    
-    <form action="/crawl_TGDD">
-      
+    <form class="form1" action="/crawl_TGDD">
+      <div class="formcontrol"> 
         
         <center>Nhập tên shop:  <input  type="text" name="linkname" placeholder="FPT, cellphones, TGDD, all"></center><br>
         <center>Nhập số trang:  <input type="text" name="page" placeholder="Enter the number of page" >
@@ -40,14 +40,26 @@
           <br>
         </center>
           <br>
+        </div>
+        
+        
         </form>
          <form action="/filterdanhgia">
-           <input type="text" name="nameshop" placeholder="Tên cửa hàng" >
+          <center> <input type="text" name="nameshop" placeholder="Tên cửa hàng" >
            <input type="text" name="brand" placeholder="Nhãn Hiệu" >
           <input type="text" name="giadautien" placeholder="Giá nhỏ nhất" >
             <input type="text" name="giacuoi" placeholder="Giá lớn nhất" >
             <input type="text" name="danhgia" placeholder="Đánh giá (có thế bỏ trống)" >
            <button type="submit" class="btn btn-primary">Lọc</button></center>
+        
+         </form>
+         <form action="/taofilecsv">
+
+        <center>
+          <br>
+          <input type="text" name="nameshop" placeholder="Tên cửa hàng" >
+          <input type="text" name="tenfile" placeholder="Tên csv cần lưu" >
+           <button  type="submit"  class="btn btn-primary">Tải file csv</button></center>
          </form>
 
     

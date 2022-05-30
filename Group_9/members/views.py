@@ -6,6 +6,7 @@ from .models import Dt1, Dt2, Dt3, Dt4,Dt5
 import crawlTGDD
 import locdienthoai
 import crawlmulti
+import taofielcsv
 link_name=""
 def index(request):
   mymembers = Dt1.objects.all().values()
@@ -105,6 +106,8 @@ def crawl_TGDD(request):
         'mymembers': mymembers,
         }
         return HttpResponse(template.render(context, request))
+      elif link_name[0]=="":
+        return HttpResponse("Mời bạn nhập dữ liệu")
 def filterdanhgia(request):
   name1=request.GET['nameshop']
   brand=request.GET['brand']
@@ -183,3 +186,28 @@ def filterdanhgia(request):
       'mymembers': mymembers,
       }
     return HttpResponse(template.render(context, request))
+def tao_csv(request):
+  tenfile=request.GET['tenfile']
+  tenshop=request.GET['nameshop']
+  tenshop=tenshop.split(',')
+  if (len(tenshop)==1):
+    if (tenshop[0]=="TGDD"):
+      tensql="dienthoai.db"
+      tenbang="dienthoai1"
+      a=taofielcsv.taofilecsv(tenfile,tensql,tenbang)
+      return HttpResponse("Đã tạo file csv")
+    elif (tenshop[0]=="FPT"):
+      tensql="dienthoai.db"
+      tenbang="dienthoai3"
+      a=taofielcsv.taofilecsv(tenfile,tensql,tenbang)
+      return HttpResponse("Đã tạo file csv")
+    elif (tenshop[0]=="cellphones"):
+      tensql="dienthoai.db"
+      tenbang="dienthoai2"
+      a=taofielcsv.taofilecsv(tenfile,tensql,tenbang)
+      return HttpResponse("Đã tạo file csv")
+  else:
+    tensql="dienthoai.db"
+    tenbang="dienthoaiall"
+    a=taofielcsv.taofilecsv(tenfile,tensql,tenbang)
+    return HttpResponse("Đã tạo file csv")
