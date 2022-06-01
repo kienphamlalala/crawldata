@@ -30,21 +30,26 @@
     <center><h3>Crawl dữ liệu điện thoại</h3></center>
     <br>
    
-    <form class="form1" action="/crawl_TGDD">
+   <center> <form class="form1" action="/crawl_TGDD">
       <div class="formcontrol"> 
         
         <center>Nhập tên shop:  <input  type="text" name="linkname" placeholder="FPT, cellphones, TGDD, all"></center><br>
-        <center>Nhập số trang:  <input type="text" name="page" placeholder="Enter the number of page" >
+        <center>Nhập số trang:  <input type="text" name="page" placeholder="Enter the number of page" ></center>
           
           <center> <br><button type="submit" class="btn btn-primary">Crawl</button>
-          <br>
-        </center>
-          <br>
-        </div>
-        
-        
+           <br>
+           <br>
+           <br>
+           <br>
+          </div>
+           
+            
+         
+       
         </form>
          <form action="/filterdanhgia">
+           <br>
+           <center><h3>Lọc ra các điện thoại giữa các cửa hàng</h3></center>
           <center> <input type="text" name="nameshop" placeholder="Tên cửa hàng" >
            <input type="text" name="brand" placeholder="Nhãn Hiệu" >
           <input type="text" name="giadautien" placeholder="Giá nhỏ nhất" >
@@ -75,6 +80,87 @@
         <tr>
           <td>Tên sản phẩm</td>
           <td>Nhãn hiệu</td>
+          <!-- <td>Cấu hình</td>
+          <td>Hệ điều hành</td>
+          <td>Camera trước</td>
+          <td>Camera sau</td>
+          <td>Chip</td>
+          <td>Ram</td>
+          <td>Rom</td>
+          <td>Pin</td> -->
+          <td>Giá</td>
+          <td>Đánh giá</td>
+          <td>Số lượng</td>
+          <td>Link sản phẩm</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% for x in mymembers %}
+        <tr>
+          <td>{{x.name}}</td>
+          <td>{{x.brand}}</td>
+          <!-- <td>{{x.display}}</td>
+          <td>{{x.hdh}}</td>
+          <td>{{x.camera_truoc}}</td>
+          <td>{{x.camera_sau}}</td>
+          <td>{{x.chip}}</td>
+          <td>{{x.ram}}</td>
+          <td>{{x.rom}}</td>
+          <td>{{x.battery}}</td> -->
+          <td>{{x.gia}}</td>
+          <td>{{x.danhgia}}</td>
+          <td>{{x.soluong}}</td>
+          <td><a href="{{x.link}}">{{x.link}}</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <center><h3>Cấu hình chi tiết từng điện thoại trên </h3></center>
+    <table class="table table-bordered mt60">
+      <thead class="bg-color text-bold td">
+        <tr>
+          <!-- <td>Tên sản phẩm</td>
+          <td>Nhãn hiệu</td> -->
+          <!-- <td>Cấu hình</td> -->
+          <td>Hệ điều hành</td>
+          <td>Camera trước</td>
+          <td>Camera sau</td>
+          <td>Chip</td>
+          <td>Ram</td>
+          <td>Rom</td>
+          <td>Pin</td>
+          <td>Giá</td>
+          <td>Đánh giá</td>
+          <!-- <td>Số lượng</td>
+          <td>Link sản phẩm</td> -->
+        </tr>
+      </thead>
+      <tbody>
+        {% for x in mymembers %}
+        <tr>
+          <!-- <td>{{x.name}}</td>
+          <td>{{x.brand}}</td> -->
+          <!-- <td>{{x.display}}</td> -->
+          <td>{{x.hdh}}</td>
+          <td>{{x.camera_truoc}}</td>
+          <td>{{x.camera_sau}}</td>
+          <td>{{x.chip}}</td>
+          <td>{{x.ram}}</td>
+          <td>{{x.rom}}</td>
+          <td>{{x.battery}}</td>
+          <td>{{x.gia}}</td>
+          <!-- <td>{{x.danhgia}}</td>
+          <td>{{x.soluong}}</td> -->
+          <td><a href="{{x.link}}">{{x.link}}</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <table class="table table-bordered mt60">
+      <thead class="bg-color text-bold td">
+        <tr>
+          <td>Tên sản phẩm</td>
+          <td>Nhãn hiệu</td>
           <td>Cấu hình</td>
           <td>Hệ điều hành</td>
           <td>Camera trước</td>
@@ -90,7 +176,7 @@
         </tr>
       </thead>
       <tbody>
-        {% for x in mymembers %}
+        {% for x in mymembers1 %}
         <tr>
           <td>{{x.name}}</td>
           <td>{{x.brand}}</td>

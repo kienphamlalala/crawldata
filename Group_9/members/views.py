@@ -10,8 +10,10 @@ import taofielcsv
 link_name=""
 def index(request):
   mymembers = Dt1.objects.all().values()
+  mymembers1 = Dt2.objects.all().values()
   template = loader.get_template('index.html')
   context = {
+    'mymembers1': mymembers1,
     'mymembers': mymembers,
   }
   return HttpResponse(template.render(context, request))
@@ -46,10 +48,10 @@ def crawl_TGDD(request):
         numPg1=request.GET['page']
         numPg=int(numPg1)
         b=crawlTGDD.crawl_Cellphones(numPg)
-        mymembers = Dt2.objects.all().values()
+        mymembers1 = Dt2.objects.all().values()
         template = loader.get_template('index.html')
         context = {
-        'mymembers': mymembers,
+        'mymembers1': mymembers1,
         }
         return HttpResponse(template.render(context, request))
       else:
